@@ -1,0 +1,51 @@
+
+.Joinpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1919; /* Set background color */
+  }
+
+.JoinContainer {
+    text-align: center;
+    background-color: #eee3e3; /* Set container background color */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .JoinContainer img {
+    width: 150px; /* Adjust the image size as needed */
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px; /* Add space below the heading */
+  }
+  
+  #joinInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px; /* Add space below the input */
+    border: 1px solid #050505; /* Add a border */
+    border-radius: 3px;
+  }
+  
+  .joinBtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Set button background color */
+    color: #ffffff; /* Set button text color */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .joinBtn:hover {
+    background-color: #0056b3; /* Change button background color on hover */
+  }
+  
