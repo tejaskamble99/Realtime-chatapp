@@ -15,6 +15,8 @@ const Chat = () => {
   const [id, setId] = useState("");
   const [messages, setMessages] = useState([]);
 
+  
+
   useEffect(() => {
     const newSocket = socketIO(ENDPOINT, { transports: ["websocket"] });
     setSocket(newSocket);
@@ -75,6 +77,14 @@ const Chat = () => {
     // Scroll to bottom of chat box
     chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
   }, [messages]);
+
+  useEffect(() => {
+    if(socket) {
+        socket.on("displayTyping", () => {
+            console.log("Someone else is typing...");
+        });
+    }
+}, [socket]);
 
   return (
     <div className="chatPage">
