@@ -44,7 +44,7 @@ io.on("connection", (socket) => {
     });
     console.log(`user left`);
   });
-  socket.on("typing", () => {
+  socket.on("typing", (room) => {
     socket.broadcast.emit("typing", { user: users[socket.id] });
  console.log("typing");
 });

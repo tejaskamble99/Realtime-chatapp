@@ -101,7 +101,7 @@ const Chat = () => {
         </div>
         <div className="inputBox">
           <input
-          onChange={() => socket.emit('typing')}
+          onChange={() => socket.emit('typing', roomID)}
   
   onKeyPress={(event) =>
               event.key === "Enter" ? sendMessage() : null
