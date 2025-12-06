@@ -56,14 +56,13 @@ io.on("connection", (socket) => {
       delete users[socket.id];
     }
   });
-
-  // ✅ CORRECT LOCATION: Inside the connection block
   socket.on("typing", () => {
-    socket.broadcast.emit('displayTyping', { user: users[socket.id] });
-    console.log(`${users[socket.id]} is typing`);
-  });
+    socket.broadcast.emit("typing", { user: users[socket.id] });
+ console.log("typing");
+});
+});
 
-}); // <--- The connection block ENDS here
+ // <--- The connection block ENDS here
 
 server.listen(port, () => {
   console.log(`Server is working on http://localhost:${port}`);

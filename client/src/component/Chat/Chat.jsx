@@ -20,6 +20,8 @@ const Chat = () => {
 
   const user = localStorage.getItem("chatUser");
 
+  
+
   useEffect(() => {
     const newSocket = socketIO(ENDPOINT, { transports: ["websocket"] });
     setSocket(newSocket);
@@ -83,6 +85,14 @@ const Chat = () => {
         chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
     }
   }, [messages]);
+
+  useEffect(() => {
+    if(socket) {
+        socket.on("displayTyping", () => {
+            console.log("Someone else is typing...");
+        });
+    }
+}, [socket]);
 
   return (
     <div className="chatPage">
