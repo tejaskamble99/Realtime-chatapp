@@ -1,0 +1,79 @@
+/* Chat.css */
+
+.chatPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chatContainer {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chatBoxContainer {
+  height: 200px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
+
+.chatBox {
+  width: 100%;
+}
+
+.inputBox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.inputBox input {
+  flex: 1; /* Grow to fill remaining space */
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.inputBox button {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for image inside button */
+.inputBox button img {
+  width: 20px;
+  height: 20px;
+  filter:brightness(100) invert();
+  transition: all 0.3s;
+}
+
+/* Updated hover selectors */
+.inputBox button:hover {
+  background-color: rgb(156, 13, 42);
+}
+
+.inputBox button:hover img {
+  transform: translateX(10px);
+}
+
+
+.typingText {
+    color: #888;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
